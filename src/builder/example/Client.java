@@ -36,7 +36,9 @@ public class Client {
         }};
         
         
-        System.out.println("Day1: "+newDay1.getDate()+" - "+newDay1.getHotel()+" - "+newDay1.getEvents());
-        System.out.println("Day2: " + newDay2.getDate()+" - "+newDay2.getHotel()+" - "+newDay2.getEvents()+" - "+newDay2.getListFood());
+        //System.out.println("Day1: "+newDay1.getDate()+" - "+newDay1.getHotel()+" - "+newDay1.getEvents());
+        //System.out.println("Day2: " + newDay2.getDate()+" - "+newDay2.getHotel()+" - "+newDay2.getEvents()+" - "+newDay2.getListFood());
+        System.out.println("Day1: "+newDay1.toString());
+        System.out.println("Day2: " + newDay2.toString());
     }
 }

@@ -5,8 +5,8 @@
  */
 package builder.components;
 
-import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -51,6 +51,31 @@ public class Day {
 
     public void setListFood(List<Food> listFood) {
         this.listFood = listFood;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder("Day{ ");
+        String delimiter = " - ";
+        if (date != null){
+            result.append(date);
+            result.append(delimiter);
+        }
+        if (hotel != null){
+            result.append(hotel);
+            result.append(delimiter);
+        }
+        if (events != null){
+            result.append(String.join(", ", events.stream().map(Object::toString).collect(Collectors.toList())));
+            result.append(delimiter);
+        }
+        if (listFood != null){
+            result.append(String.join(", ", listFood.stream().map(Object::toString).collect(Collectors.toList())));
+            result.append(delimiter);
+        }
+        result.setLength(result.length()-delimiter.length());
+        result.append('}');
+        return result.toString();
     }
     
 }
