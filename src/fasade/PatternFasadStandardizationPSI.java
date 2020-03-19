@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fasad;
+package fasade;
 import java.io.IOException;
 
 /**
@@ -18,9 +18,9 @@ public class PatternFasadStandardizationPSI {
      */
     public static void main(String[] args) throws IOException {
         FasadFileOperations fOp = new FasadFileOperations();
-        String resultRead = fOp.readFile("forTests\\readMe.txt");
+        String resultRead = fOp.readFile("resurces\\forTests\\readMe.txt");
         System.out.println(resultRead);
-        fOp.writeFile("forTests\\writeToMe.txt", resultRead, false);
+        fOp.writeFile("resurces\\forTests\\writeToMe.txt", resultRead, false);
     }
     
 }
