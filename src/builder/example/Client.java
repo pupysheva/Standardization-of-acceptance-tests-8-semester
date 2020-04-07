@@ -3,13 +3,14 @@ import builder.builders.DayBuilder;
 import builder.components.Day;
 import builder.components.Food;
 import builder.components.SpecialEvent;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         Day newDay1 = new DayBuilder()
-                .addDate("20 марта 2020")
+                .addDate("20.03.2020")
                 .addHotel("Hotel_1")
                 .addSpecialEvents(new ArrayList() {{
                         add(SpecialEvent.MUSEUM);
@@ -18,7 +19,7 @@ public class Client {
                 .getVacationPlanner();
         
         Day newDay2 = new DayBuilder()
-                .addDate("21 марта 2020")
+                .addDate("21.03.2020")
                 .addHotel("Hotel_2")
                 .addSpecialEvents(new ArrayList() {{
                         add(SpecialEvent.CINEMA);

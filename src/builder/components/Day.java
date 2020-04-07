@@ -5,6 +5,9 @@
  */
 package builder.components;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,7 +16,7 @@ import java.util.stream.Collectors;
  * @author pupys
  */
 public class Day {
-    private String date;
+    private Date date;
     private String hotel;
     private List<SpecialEvent> events;//Билеты в парк, музей, цирк
     private List<Food> listFood;
@@ -21,12 +24,14 @@ public class Day {
 
     public Day() {}
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate(String dateStr) throws ParseException {
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+        Date docDate= format.parse(dateStr);
+        this.date = docDate;
     }
 
     public String getHotel() {

@@ -8,6 +8,7 @@ package builder.builders;
 import builder.components.Day;
 import builder.components.SpecialEvent;
 import builder.components.Food;
+import java.text.ParseException;
 import java.util.List;
 
 /**
@@ -22,7 +23,7 @@ public class DayBuilder {
     }
     
     
-    public DayBuilder addDate(String d) {
+    public DayBuilder addDate(String d) throws ParseException {
         newDay.setDate(d);
         return this;
     }
