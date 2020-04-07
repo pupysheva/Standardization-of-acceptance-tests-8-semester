@@ -14,12 +14,12 @@ import java.util.*;
  */
 public abstract class Order {
     int id;
-    List products = new ArrayList();
+    List<IProduct> products = new ArrayList();
     IA a;
     IB b;
     
     @Override
     public String toString(){
-        return "Order: " + this.id + "  " + this.a.toSting()+";  "+this.b.toSting();
+        return "Order: " + this.id + "  " + this.products.get(0).toSting()+";  "+this.products.get(1).toSting();
     }
 }

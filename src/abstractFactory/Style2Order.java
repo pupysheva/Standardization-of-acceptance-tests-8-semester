@@ -16,5 +16,7 @@ public class Style2Order extends Order{
         id = 3;
         a = (factory.createA());
         b = (factory.createB());
+        products.add(factory.createA());
+        products.add(factory.createB());
     }
 }

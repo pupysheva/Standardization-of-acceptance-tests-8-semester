@@ -9,7 +9,6 @@ package abstractFactory.interfaces;
  *
  * @author pupys
  */
-public interface IB extends IProduct{
-    @Override
+public interface IProduct {
     public String toSting();
 }
