@@ -14,7 +14,7 @@ import abstractFactory.interfaces.IFactory;
 public class Style2Order extends Order{
     public Style2Order(IFactory factory){
         id = 3;
-        products.add(factory.createA());
-        products.add(factory.createB());
+        a = (factory.createA());
+        b = (factory.createB());
     }
 }

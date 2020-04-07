@@ -5,6 +5,7 @@
  */
 package abstractFactory;
 
+import abstractFactory.interfaces.*;
 import java.util.*;
 
 /**
@@ -14,9 +15,11 @@ import java.util.*;
 public abstract class Order {
     int id;
     List products = new ArrayList();
+    IA a;
+    IB b;
     
     @Override
     public String toString(){
-        return "Order: " + this.id + "  " + this.products;
+        return "Order: " + this.id + "  " + this.a.toSting()+";  "+this.b.toSting();
     }
 }
